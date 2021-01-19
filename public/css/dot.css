@@ -2,7 +2,7 @@
 .dot{
   position:relative;
   width: 496px;
-  height: 124px;
+  height: 48px;
   margin: 0 auto;
 }
 .dot::before {
@@ -1016,5 +1016,4 @@
 468px 32px 0 transparent,
 472px 32px 0 transparent,
 476px 32px 0 transparent;
-
 }

@@ -19,6 +19,6 @@ Route::get('', 'PostsController@index');
 Route::post('', 'PostsController@store');
 Route::post('/{id}', 'PostsController@delete');
 
-//Auth::routes();
-//Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+Route::get('/', 'PostsController@index');
 
