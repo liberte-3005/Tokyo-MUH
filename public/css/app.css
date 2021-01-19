@@ -45,8 +45,7 @@
 }
 
 html {
-
-  background-color:#272343;font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-color:#fffffe;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -66,7 +65,7 @@ section {
 }
 
 body {
-  margin: 0;font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin: 0;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -10905,7 +10904,7 @@ a.text-dark:focus {
 .grid-area {
   display: grid;
   height: 100vh;                /* grid全体の高さを設定 */
-  grid-template-rows: 80% 20%;  /* gridの割合が8:2になるよう2行用意 */
+  grid-template-rows: 80% 20% ;  /* gridの割合が8:2になるよう2行用意 */
   grid-template-columns: 100%;  /* 横幅いっぱいに1列用意 */
 }
 
@@ -10916,11 +10915,28 @@ a.text-dark:focus {
 }
 
 .bottom-area {
-  background-color: #fffffe;
-  width: 80%;
+  background-color: transparent;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 50px;
-  grid-row: 2;
-  grid-column: 1;
-  overflow-y: scroll;
+  grid-row: 1;
+  grid-column: 2;
 }
+.side{
+  position:fixed;
+  top:0;
+  right: 0;
+  height:100%;
+  padding:0;
+}
+
+.scroll-area1{
+  width:100%;
+  height:calc(100% - 200px);
+  float: right;
+  overflow-y:scroll;
+}
+
+@media screen and (max-width: 580px){
+  .none {display:none}
+  }
+
