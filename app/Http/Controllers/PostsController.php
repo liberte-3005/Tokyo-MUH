@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Post;
+use App\Model\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,15 +14,17 @@ class PostsController extends Controller
         return view('tokyo',['posts'=> $posts]);
     }
 
-    public function store(Request $request){
-        $categories = $request->input('categories');
-        $users = $request->input('users');
-        $text = $request->input('text');
-        $pin_code = $request->input('pin_code');
+    public function store(Request $request)
+    {
+        $data = [
+            'cat_id' => $request->cat_id,
+            'users' => $request->users,
+            'text' => $request->text,
+        ];
+        $post = new Post;
+        $post->fill($data)->save();
 
-        Post::create(["categories" => $categories, "users" => $users, "text" =>$text, "pin_code"=>$pin_code]);
-        $posts = Post::latest()->get();
-        return view('tokyo',['posts'=> $posts]);
+        return redirect('');
     }
 
     public function delete($id){
@@ -30,8 +33,16 @@ class PostsController extends Controller
         return redirect('');
     }
 
-    public function showCity(){
-        $posts = Post::findOrFail();
-        return view('');
+    public function showCity(Request $request, $cat_id){
+        $posts = Post::findOrFail($cat_id);
+        'cat_id' => $request->cat_id
+        return view('.city',['posts' => $posts,]);
+    }
+
+    public function create(){
+        $category = new Category;
+        $categories = $category->getLists()->prepend('選択','');
+
+        return view('',['categories' => $categories]);
     }
 }
