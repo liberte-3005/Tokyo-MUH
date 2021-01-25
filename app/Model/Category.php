@@ -13,5 +13,10 @@ class Category extends Model
         return $categories;
     }
 
-    //protected $fillable = ['categories','users','text','pin_code'];
+    protected $fillable = ['name'];
+
+    public function posts()
+    {
+        return $this->hasMany('App\Model\Post');
+    }
 }

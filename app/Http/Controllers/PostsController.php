@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class PostsController extends Controller
 {
     public function index(){
-        $posts = Post::latest()->get();
+        $posts = Post::orderBy('id', 'DESC')->get();
         return view('tokyo',['posts'=> $posts]);
     }
 
@@ -20,6 +20,7 @@ class PostsController extends Controller
             'cat_id' => $request->cat_id,
             'users' => $request->users,
             'text' => $request->text,
+            'created_at' => $request->created_at,
         ];
         $post = new Post;
         $post->fill($data)->save();
@@ -33,16 +34,21 @@ class PostsController extends Controller
         return redirect('');
     }
 
-    public function showCity(Request $request, $cat_id){
-        $posts = Post::findOrFail($cat_id);
-        'cat_id' => $request->cat_id
-        return view('.city',['posts' => $posts,]);
+
+    //public function create(){
+    //    $category = new Category;
+    //    $categories = $category->getLists()->prepend('選択','');
+    //    return view('',['categories' => $categories]);
+    //}
+
+    public function cities(Request $request){
+        $key_cat_id = $request->cat_id;
+        if(!empty($key_cat_id)){
+            $query = Post::query();
+            $posts = $query->where('cat_id',$key_cat_id)->get();
+            return view('tokyo')->with(['posts' => $posts]);
+        }
     }
 
-    public function create(){
-        $category = new Category;
-        $categories = $category->getLists()->prepend('選択','');
 
-        return view('',['categories' => $categories]);
-    }
 }
