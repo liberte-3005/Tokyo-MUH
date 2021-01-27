@@ -39,11 +39,14 @@
             </div>
         </div>
 
+
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-9 card">
                     <div>
-                        <form method="GET" action="">
+                    @include('modal')
+<!--                        <form method="GET" action="{{ action('PostsController@cities') }}">
                         @csrf
                             <select name="cat_id" value="(config('categories'))">
                                 @foreach(config('categories') as $categories => $name)
@@ -52,11 +55,12 @@
                             </select>
                             <input type="submit" value="みる" class="">
                         </form>
+-->
                         <div>
-                            @if($posts->count()) 
+                            @if(isset($posts)) 
                             <table>
-                            {{ $name }}について
                                 @foreach ($posts as $post)
+
                                 <li>{{ $post->users }}の声「{{ $post->text }}」
                                     <br>{{ $post->created_at->format('Y年m月d日(D)H:i') }}
                                 </li>
@@ -66,9 +70,6 @@
                                  </form>
                                 @endforeach
                             </table>
-                            @else
-                            {{ $name }}について
-                                <p>まだ書き込みがありません</p>
                             @endif
                         </div>
                     </div>

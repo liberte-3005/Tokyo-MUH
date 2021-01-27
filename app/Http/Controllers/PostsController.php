@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class PostsController extends Controller
 {
     public function index(){
-        $posts = Post::orderBy('id', 'DESC')->get();
+        $posts = Post::orderBy('id', 'DESC')->take(5)->get();
         return view('tokyo',['posts'=> $posts]);
     }
 
@@ -42,11 +42,16 @@ class PostsController extends Controller
     //}
 
     public function cities(Request $request){
+        
         $key_cat_id = $request->cat_id;
         if(!empty($key_cat_id)){
             $query = Post::query();
-            $posts = $query->where('cat_id',$key_cat_id)->get();
+            $posts = $query->where('cat_id', $key_cat_id)->get();
+            $message = "一覧";
             return view('tokyo')->with(['posts' => $posts]);
+        }else{
+            $message = "まだ";
+            return view('tokyo')->with(['message',$message]);
         }
     }
 

@@ -13,5 +13,7 @@ class Post extends Model
     {
         return $this->belongsTo('App\Model\Category','cat_id');
     }
-
+    public function getCategoriesName() {
+        return config('category.'.$this->cat_id);
+    }
 }
