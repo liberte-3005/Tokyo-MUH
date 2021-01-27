@@ -1,3 +1,5 @@
-function clickbtn(){
-    alert('おしたね');
-}
+$(function(){
+    $(".hoge").click(function(){
+        $(this).css("background-color","blue")
+    });
+});

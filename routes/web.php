@@ -18,7 +18,9 @@ Route::get('/', function () {
 Route::get('', 'PostsController@index');
 Route::post('', 'PostsController@store');
 Route::post('/{id}', 'PostsController@delete');
+Route::get('/cities', 'PostsController@cities');
 
 Auth::routes();
 Route::get('/', 'PostsController@index');
+
 
