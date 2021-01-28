@@ -21,6 +21,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dot.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/modal.css') }}" rel="stylesheet">
 </head>
 
 
@@ -44,37 +45,29 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-9 card">
-                    <div>
-                    @include('modal')
-<!--                        <form method="GET" action="{{ action('PostsController@cities') }}">
-                        @csrf
-                            <select name="cat_id" value="(config('categories'))">
-                                @foreach(config('categories') as $categories => $name)
-                                    <option value="{{ $categories}}">{{ $name }}</option>
-                                @endforeach
-                            </select>
-                            <input type="submit" value="みる" class="">
-                        </form>
--->
-                        <div>
-                            @if(isset($posts)) 
-                            <table>
-                                @foreach ($posts as $post)
-
-                                <li>{{ $post->users }}の声「{{ $post->text }}」
-                                    <br>{{ $post->created_at->format('Y年m月d日(D)H:i') }}
-                                </li>
-                                <form action="{{ action('PostsController@delete', $post->id) }}" method="post">
-                                    @csrf
-                                    <button class="btn">削除する</button>
-                                 </form>
-                                @endforeach
-                            </table>
-                            @endif
-                        </div>
+                    <div class="card-body">
+                        @include('modal')
                     </div>
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-9 card">
+                        <ul class="card-body">
+                            @if(isset($posts)) 
+                            <div class="">
+                                @foreach ($posts as $post)
 
+                                <p>{{ $post->users }}の声<span class="date">{{ $post->created_at->format('Y年m月d日(D)H:i') }}</span></p>
+                                <p> 「{{ $post->text }}」</p>
+                                 <form action="{{ action('PostsController@delete', $post->id) }}" method="post">
+                                    @csrf
+                                    <input type="submit" value="削除" class="btn right">
+                                 </form>
+                                @endforeach
+                            </div>
+                            @endif
+                        </ul>
+                </div>
             </div>
         </div>
     </div>
