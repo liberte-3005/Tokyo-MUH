@@ -1,18 +1,18 @@
 
-                    <div class="card-body map">
+                    <div class="card-body tokyo-map">
                     <form method="GET" action="{{ action('PostsController@cities') }}">
 
 
                         <!-- Modalエリア -->
-                        <img src="{{ asset('/img/23WARDS.png') }}" class="layer-img tokyo-map" width="100%">
+                        <img src="{{ asset('/img/23WARDS.png') }}" class="layer-img">
                         
-                        <ul id="btn">
-                        <li type="button" class="btn btn-outline-warning city-center" data-toggle="modal" data-target="#modal01">中心部</li>
-                        <li type="button" class="btn btn-outline-warning city-east" data-toggle="modal" data-target="#modal02">東部</li>
-                        <li type="button" class="btn btn-outline-warning city-west" data-toggle="modal" data-target="#modal03">西部</li>
-                        <li type="button" class="btn btn-outline-warning city-south" data-toggle="modal" data-target="#modal04">南部</li>
-                        <li type="button" class="btn btn-outline-warning city-north" data-toggle="modal" data-target="#modal05">北部</li>
-                        </ul>
+                        <div id="btn" class="">
+                            <div type="button" class="btn btn-warning area-btn city-center" data-toggle="modal" data-target="#modal01" data-toggle="tooltip" title="千代田区・中央区・新宿区・渋谷区・港区">中心部</div>
+                            <div type="button" class="btn btn-warning area-btn city-east" data-toggle="modal" data-target="#modal02" data-toggle="tooltip" title="足立区・葛飾区・江戸川区・荒川区・台東区・墨田区・江東区">東部</div>
+                            <div type="button" class="btn btn-warning area-btn city-west" data-toggle="modal" data-target="#modal03 " data-toggle="tooltip" title="練馬区・中野区・杉並区">西部</div>
+                            <div type="button" class="btn btn-warning area-btn city-south" data-toggle="modal" data-target="#modal04" data-toggle="tooltip" title="世田谷区・目黒区・品川区・大田区">南部</div>
+                            <div type="button" class="btn btn-warning area-btn city-north" data-toggle="modal" data-target="#modal05" data-toggle="tooltip" title="板橋区・北区・豊島区・文京区">北部</div>
+                        </div>
                         <div class="modal fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="modal01" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">

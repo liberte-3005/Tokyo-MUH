@@ -1,0 +1,60 @@
+
+.tokyo-map{
+  width: 90%;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: table;
+}
+/*スマホ対応用 */
+.tokyo-map img{
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  -webkit-backface-visibility: hidden;
+}
+/* 日本地図ボタン */
+.tokyo-map .area-btn{
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  padding: 0.2em auto;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ボタン配置 */
+.tokyo-map .area-btn.city-east{
+  top: 30%;
+  right: 18%;
+  width: 20%;
+}
+.tokyo-map .area-btn.city-north{
+  top: 24%;
+  right: 45%;
+  width: 20%;
+}
+.tokyo-map .area-btn.city-center{
+  top: 46%;
+  right: 42%;
+  width: 20%;
+}
+.tokyo-map .area-btn.city-south{
+  top: 65%;
+  left: 24%;
+  width: 20%;
+}
+.tokyo-map .area-btn.city-west{
+  top: 33%;
+  left: 10%;
+  width: 20%;
+}
+
+
+@media screen and (max-width: 480px){
+  /* スマホユーザー向けにボタン文字サイズを調整 */
+  .tokyo-map .area-btn{
+      font-size: 4vw;
+  }
+}
