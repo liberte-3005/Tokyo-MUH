@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class PostsController extends Controller
 {
     public function index(){
-        $posts = Post::orderBy('id', 'DESC')->take(5)->get();
+        $posts = Post::orderBy('id', 'DESC')->get();
         return view('tokyo',['posts'=> $posts]);
     }
 
