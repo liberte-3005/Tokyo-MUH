@@ -21,13 +21,11 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                         <div class="city_list">
-                                            <ul id="mainimage">
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 16 }}" class="btn btn-outline-warning">千代田区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 17 }}" class="btn btn-outline-warning">中央区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 11 }}" class="btn btn-outline-warning">新宿区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 10 }}" class="btn btn-outline-warning">渋谷区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 22 }}" class="btn btn-outline-warning">港区</button>
-                                            </ul>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 16 }}" class="btn btn-warning">千代田区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 17 }}" class="btn btn-warning">中央区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 11 }}" class="btn btn-warning">新宿区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 10 }}" class="btn btn-warning">渋谷区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 22 }}" class="btn btn-warning">港区</button>
                                         </div>
                                     </div>
                                 </div>
@@ -41,13 +39,13 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                         <div class="city_list">
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 1 }}" class="btn btn-outline-warning">足立区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 6 }}" class="btn btn-outline-warning">葛飾区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 4 }}" class="btn btn-outline-warning">江戸川区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 2 }}" class="btn btn-outline-warning">荒川区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 15 }}" class="btn btn-outline-warning">台東区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 13 }}" class="btn btn-outline-warning">墨田区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 8 }}" class="btn btn-outline-warning">江東区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 1 }}" class="btn btn-warning">足立区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 6 }}" class="btn btn-warning">葛飾区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 4 }}" class="btn btn-warning">江戸川区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 2 }}" class="btn btn-warning">荒川区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 15 }}" class="btn btn-warning">台東区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 13 }}" class="btn btn-warning">墨田区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 8 }}" class="btn btn-warning">江東区</button>
                                         </div>
                                     </div>
                                 </div>
@@ -60,10 +58,10 @@
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
-                                        <div class="city_list" data-list="3">
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 20 }}" class="btn btn-outline-warning">練馬区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 19 }}" class="btn btn-outline-warning">中野区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 12 }}" class="btn btn-outline-warning">杉並区</button>
+                                        <div class="city_list">
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 20 }}" class="btn btn-warning">練馬区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 19 }}" class="btn btn-warning">中野区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 12 }}" class="btn btn-warning">杉並区</button>
                                         </div>
                                     </div>
                                 </div>
@@ -76,11 +74,11 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
-                                        <div class="city_list" data-list="4">
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 14 }}" class="btn btn-outline-warning">世田谷区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 23 }}" class="btn btn-outline-warning">目黒区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 9 }}" class="btn btn-outline-warning">品川区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 5 }}" class="btn btn-outline-warning">大田区</button>
+                                        <div class="city_list">
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 14 }}" class="btn btn-warning">世田谷区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 23 }}" class="btn btn-warning">目黒区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 9 }}" class="btn btn-warning">品川区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 5 }}" class="btn btn-warning">大田区</button>
                                         </div>
                                     </div>
                                 </div>
@@ -93,11 +91,11 @@
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
-                                        <div class="city_list" data-list="5">
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 3 }}" class="btn btn-outline-warning">板橋区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 7 }}" class="btn btn-outline-warning">北区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 18 }}" class="btn btn-outline-warning">豊島区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 21 }}" class="btn btn-outline-warning">文京区</button>
+                                        <div class="city_list">
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 3 }}" class="btn btn-warning">板橋区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 7 }}" class="btn btn-warning">北区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 18 }}" class="btn btn-warning">豊島区</button>
+                                            <button type="submit" name="cat_id" value="{{ $cat_id = 21 }}" class="btn btn-warning">文京区</button>
                                         </div>
                                     </div>
                                 </div>

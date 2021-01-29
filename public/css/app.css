@@ -45,10 +45,11 @@
 }
 
 html {
-  background-color: #fffffe;
+  background-color: #ffffce;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: 'Kosugi Maru', sans-serif;
 }
 
 article,
@@ -69,7 +70,7 @@ body {
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #272343;
+  color:#00837e;
   text-align: left;
 }
 
@@ -2829,6 +2830,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning {
+  margin-top: 16px;
   color:#00C2BA;
   background-color: #ffed4a;
   border-color: #ffed4a;
@@ -10901,26 +10903,10 @@ a.text-dark:focus {
   }
 }
 
-.grid-area {
-  display: grid;
-  height: 100vh;                /* grid全体の高さを設定 */
-  grid-template-rows: 80% 20% ;  /* gridの割合が8:2になるよう2行用意 */
-  grid-template-columns: 100%;  /* 横幅いっぱいに1列用意 */
+.head-dots{
+  margin-top: 10px;
 }
 
-.top-area {
-  grid-row: 1;
-  grid-column: 1;
-  overflow-y: scroll; 
-}
-
-.bottom-area {
-  background-color: transparent;
-  width: 100%;
-  margin: 0 auto;
-  grid-row: 1;
-  grid-column: 2;
-}
 .side{
   position:fixed;
   top:0;

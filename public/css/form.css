@@ -1,0 +1,42 @@
+.main_content{
+  margin-top: 72px;
+}
+
+.title-tokyo{
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+
+
+.post-txt{
+  margin-top: 24px;
+  text-align: left;
+}
+
+.post-txt .user-txt{
+  color: #00C2BA;
+}
+.post-txt .msg-txt{
+  color: #00C2BA;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 580px){
+  .none {display:none}
+  }
+
+
+  .date{
+    font-size: xx-small;
+    color: #dcdcdc;
+  }
+
+
+
+
