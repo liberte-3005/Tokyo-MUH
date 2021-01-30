@@ -34,25 +34,16 @@ class PostsController extends Controller
         return redirect('');
     }
 
-
-    //public function create(){
-    //    $category = new Category;
-    //    $categories = $category->getLists()->prepend('選択','');
-    //    return view('',['categories' => $categories]);
-    //}
-
     public function cities(Request $request){
         
         $key_cat_id = $request->cat_id;
         if(!empty($key_cat_id)){
             $query = Post::query();
             $posts = $query->where('cat_id', $key_cat_id)->get();
-            $message = "一覧";
-            return view('tokyo')->with(['posts' => $posts]);
-        }else{
-            $message = "まだ";
-            return view('tokyo')->with(['message',$message]);
         }
+            return view('tokyo')->with(['posts' => $posts]);
+        
+        
     }
 
 
