@@ -59,10 +59,10 @@
                 <p class="dot"></p>
             </div>
             <div class="text-center">
-                <h3>WHAT'S THIS!?</h3>
-                <p>東京23区を愛するみなさまの声を集めたい。</p>
+                <h3>みんなの、23区。</h3>
+                <p>東京23区を愛するみなさまの声を集めたい。あなたのメッセージを待っています。</p>
                 <!-- フォームエリア -->
-                <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modal-post">カキコ</button>
+                <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modal-post">カキ.com</button>
             </div>
                 <div class="modal fade" id="modal-post" tabindex="-1">
                     <div class="modal-dialog">
@@ -112,6 +112,7 @@
                         <div class="card-body">
                             @if(isset($posts)) 
                             <div class="post-txt">
+                            <img src="{{ asset('img/1.png') }}" width="30%">
                                 @foreach ($posts as $post)
                                 <p>{{ $post->category->name }}は、「<span class="msg-txt">{{ $post->text }}</span>」<span class="date">{{ $post->created_at->format('Y年m月d日(D)H:i') }}</span>　by<span class="user-txt">{{ $post->users }}</span></p>
                                 @endforeach

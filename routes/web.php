@@ -20,7 +20,12 @@ Route::post('', 'PostsController@store');
 Route::post('/{id}', 'PostsController@delete');
 Route::get('/cities', 'PostsController@cities');
 
+
+
 Auth::routes();
-Route::get('/', 'PostsController@index');
 
+Route::get('/home', 'HomeController@index')->name('home');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
