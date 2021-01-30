@@ -19,7 +19,7 @@ Route::get('', 'PostsController@index');
 Route::post('', 'PostsController@store');
 Route::post('/{id}', 'PostsController@delete');
 Route::get('/cities', 'PostsController@cities');
-
+Route::get('/del', 'Controller@index');
 
 
 Auth::routes();

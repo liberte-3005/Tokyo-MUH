@@ -19,4 +19,8 @@ class Category extends Model
     {
         return $this->hasMany('App\Model\Post');
     }
+
+    public function getCategoryNameAttribute(){
+        return config('categories.'.$this->cat_id);
+    }
 }

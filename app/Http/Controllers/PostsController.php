@@ -34,13 +34,6 @@ class PostsController extends Controller
         return redirect('');
     }
 
-
-    //public function create(){
-    //    $category = new Category;
-    //    $categories = $category->getLists()->prepend('選択','');
-    //    return view('',['categories' => $categories]);
-    //}
-
     public function cities(Request $request){
         
         $key_cat_id = $request->cat_id;

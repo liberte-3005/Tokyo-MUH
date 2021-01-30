@@ -9,8 +9,10 @@
 
 
 .post-txt{
-  margin-top: 24px;
-  text-align: left;
+  margin-bottom: 16px;
+  padding-top: 16px;
+  text-align: left;  
+  border-bottom: 1px solid rgb(248, 219, 255);
 }
 
 .post-txt .user-txt{
@@ -20,10 +22,24 @@
   color: #00C2BA;
 }
 
+.main-msg{
+    text-align: center;
+}
+
+.main-msg-txt{
+  padding-top: 50px;
+  text-align: center;
+}
+
+#bg-img{
+  background:url('/img/night_dots.png');
+}
 
 
-
-
+.modal-body .msg-warning{
+  font-size: smaller;
+  color: #ff8fcf;
+}
 
 
 
