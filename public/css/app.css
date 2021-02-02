@@ -3281,6 +3281,21 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
+
+.btn-classic {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: rgb(209, 209, 209);
+  border-top: solid 1px #fff;
+  border-radius: 0px;
+  box-shadow: -1px -1px 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+.btn-classic:active {
+  transform: translateY(2px);
+  border-bottom: none;
+}
+
 .btn-link {
   font-weight: 400;
   color: #3490dc;
@@ -4523,11 +4538,14 @@ input[type=button].btn-block {
   font-size: 1.125rem;
   line-height: inherit;
   white-space: nowrap;
+  color: #00c2ba;
+  border-bottom: 1px solid rgb(248, 219, 255);
 }
 
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+  color: #037a90;
 }
 
 .navbar-nav {
@@ -4941,7 +4959,7 @@ input[type=button].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgb(248, 219, 255);
-  border-radius: 0.25rem;
+  
 }
 
 .card > hr {
@@ -6251,11 +6269,19 @@ a.close.disabled {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: rgb(209, 209, 209);
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
   outline: 0;
+}
+.modal-innner{
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
+  padding: 3px 8px 0px 3px;
+  color: #000;
+}
+.modal-label{
+  font-family: 'VT323', monospace;
+  font-size: 24px;
 }
 
 .modal-backdrop {
@@ -6280,11 +6306,12 @@ a.close.disabled {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1rem 1rem;
-  border-bottom: 1px solid #dee2e6;
-  border-top-left-radius: calc(0.3rem - 1px);
-  border-top-right-radius: calc(0.3rem - 1px);
+  padding: 0rem 1rem;
+  margin: 4px;
+  background: linear-gradient(-135deg, #7f8ea8, #1a4daa);
+  color: #fff;
 }
+
 
 .modal-header .close {
   padding: 1rem 1rem;

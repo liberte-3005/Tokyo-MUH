@@ -18,6 +18,8 @@
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;500;900&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
 <!-- Styles -->
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
@@ -30,8 +32,8 @@
 <body>
 <header>
   <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #68afbc;">
-        <h1><a class="navbar-brand" href="">みんなの、23区。</a></h1>
+    <nav class="navbar navbar-expand-md fixed-top" style="background-color: transparent">
+        <h1><a class="navbar-brand" href="/">　みんなの、23区。　</a></h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,7 +59,7 @@
 
             <div class="main-msg">
                 <h2 class="main-msg-txt">トーキョー、どう？</h2>
-                <p>東京23区を愛するみなさまの声を集めたい！というサイトです。<br>23区について、一言ずつ書いてみてください。
+                <p>東京23区を愛するみなさまの声を集めたい！という思いから「みんなの、23区。」を開放します。<br>23区について、一言ずつ書いてみてください。
                     思わぬ盛り上がりがあるかもしれませんね。<br>あなたのメッセージを待っています。</p>
                 <!-- フォームエリア -->
                     <button class="btn btn-warning" data-toggle="modal" data-target="#modal-post">書き.com</button>
@@ -67,33 +69,33 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" id="modal-label">
-                                    あなたの書き込みに感謝します
-                                </h4>
+                                <p class="modal-title modal-label">
+                                    Write from here!
+                                </p>
                                 <button type="button" class="close" data-dismiss="modal">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span aria-hidden="true" class="xmark">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <form action="{{ action('PostsController@store') }}" method="POST">
-                                    <p><label>なに区のお話ですか？</label>
+                                    <p class="modal-innner"><label class="modal-label">WHERE</label>
                                         <select name="cat_id" value="categories">
                                             @foreach(config('categories') as $categories => $name)
                                             <option value="{{ $categories }}" required>{{ $name }}</option>
                                             @endforeach
                                         </select></p>
-                                    <p><label>あなたは誰？  </label>
+                                    <p class="modal-innner"><label class="modal-label">WHO ARE YOU?  </label>
                                         <label><input type="radio" name="users" value="住人" required>住人</label>
                                         <label><input type="radio" name="users" value="通行人">通行人</label>
                                         <label><input type="radio" name="users" value="外野">外野</label>
                                     </p>
-                                    <label>メッセージ<input type="text" name="text" style="width:100%" required></label>
+                                    <label class="modal-innner modal-label" style="width:100%;">MESSAGE</label><input type="text" name="text" style="width:100%;" required>
                                     <p><span class="msg-warning">ごめんなさい！一度投稿したら削除することはできません！気をつけて。</span></p>
                                     <!-- 任意の数字半角4けた（削除時に必要です）<input type="text" name="pin_code"> -->
                                     {{ csrf_field() }}
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">閉じる</button>
-                                <input type="submit" value="公開する" class="btn btn-warning">
+                                <button type="button" data-dismiss="modal" class="btn btn-classic">閉じる</button>
+                                <button type="submit" class="btn btn-classic">公開する</button>
                                 </form>
                             </div>
                         </div>
@@ -143,6 +145,7 @@
             </div>
         </div>
     </div>
+
 </footer>
 
 

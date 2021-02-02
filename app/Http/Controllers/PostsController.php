@@ -23,7 +23,6 @@ class PostsController extends Controller
             'created_at' => $request->created_at,
         ];
         $post = new Post;
-        $post->fill($data)->save();
 
         return redirect('');
     }
