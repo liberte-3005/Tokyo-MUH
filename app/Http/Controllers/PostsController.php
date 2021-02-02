@@ -23,6 +23,7 @@ class PostsController extends Controller
             'created_at' => $request->created_at,
         ];
         $post = new Post;
+        $post->fill($data)->save();
 
         return redirect('');
     }
@@ -33,16 +34,20 @@ class PostsController extends Controller
         return redirect('');
     }
 
+
+
     public function cities(Request $request){
         
         $key_cat_id = $request->cat_id;
         if(!empty($key_cat_id)){
             $query = Post::query();
             $posts = $query->where('cat_id', $key_cat_id)->get();
-        }
+            $message = "一覧";
             return view('tokyo')->with(['posts' => $posts]);
-        
-        
+        }else{
+            $message = "まだ";
+            return view('tokyo')->with(['message',$message]);
+        }
     }
 
 
