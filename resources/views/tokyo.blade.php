@@ -32,13 +32,14 @@
 <body>
 <header>
   <!-- Fixed navbar -->
+  <div class="modal-header"><p class="title-bar">TOKYO MAKES US HAPPY</p></div>
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: transparent">
         <h1><a class="navbar-brand" href="/">　みんなの、23区。　</a></h1>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
         <!-- innner -->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div >
             <button class="btn btn-outline-warning mr-auto" data-toggle="modal" data-target="#modal-post">書き.com</button>
             <div class="form-inline mt-2 mt-md-0">
                 <ul class="navbar-nav">
@@ -89,8 +90,8 @@
                                         <label><input type="radio" name="users" value="通行人">通行人</label>
                                         <label><input type="radio" name="users" value="外野">外野</label>
                                     </p>
-                                    <label class="modal-innner modal-label" style="width:100%;">MESSAGE</label><input type="text" name="text" style="width:100%;" required>
-                                    <p><span class="msg-warning">ごめんなさい！一度投稿したら削除することはできません！気をつけて。</span></p>
+                                    <label class="modal-innner modal-label" style="width:100%;">MESSAGE</label><input type="text" name="text" placeholder="全角100字まで" maxlength="200" style="width:100%;" required>
+                                    <p><span class="msg-warning">100字を超えると勝手に切れちゃいます。<br>ごめんなさい！一度投稿したら削除することはできません！気をつけて。</span></p>
                                     <!-- 任意の数字半角4けた（削除時に必要です）<input type="text" name="pin_code"> -->
                                     {{ csrf_field() }}
                             <div class="modal-footer">
@@ -119,15 +120,18 @@
                         <h3>みんなの、投稿。</h3>
                     </div>
                     <div class="card-body">
-                        @if(isset($posts)) 
-                        <!-- <img src="{{ asset('img/1adachi.png') }}" width="30%"> -->
-                            @foreach ($posts as $post)
-                        <div class="post-txt">
-                            <p>{{ $post->category->name }}は、「<span class="msg-txt">{{ $post->text }}</span>」</p>
-                            <p class="text-right"><span class="date">{{ $post->created_at->format('Y年m月d日(D)H:i') }}　by<span class="user-txt">{{ $post->users }}</span></p>
-                        </div>
-                            @endforeach
-                        @endif
+                        <!-- <img src="{{ asset('img/') }}" alt="プロフィール画像" width="30%"> -->
+                                @forelse ($posts as $post)
+                            <div class="post-txt">
+                                <p><a href="{{ action('PostsController@cities','cat_id=') }}{{ $post->cat_id }}">{{ $post->category->name }}</a>は、「<span class="msg-txt">{{ $post->text }}</span>」</p>
+                                <p class="text-right"><span class="date">{{ $post->created_at->format('Y年m月d日(D)H:i') }}　by<span class="user-txt">{{ $post->users }}</span></p>
+                            </div>
+                                @empty
+                                <p>まだ投稿がありません。</p>
+                                @endforelse
+                            <div class="pagenate">
+                                {{ $posts->links() }}
+                            </div>
                     </div>
                 </div>
             </div>

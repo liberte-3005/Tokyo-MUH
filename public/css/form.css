@@ -27,6 +27,7 @@
 }
 
 .main-msg-txt{
+  font-family: 'Kosugi Maru', sans-serif;
   padding-top: 0px;
   text-align: center;
 }
@@ -54,5 +55,16 @@
   }
 
 
-
+  input:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  input:focus::-moz-placeholder {
+    color: transparent;
+  }
+  input:focus::-ms-input-placeholder {
+    color: transparent;
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
 

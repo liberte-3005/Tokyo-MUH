@@ -9,7 +9,7 @@ class Category extends Model
     //
     public function getLists()
     {
-        $categories = Category::orderBy('id')->pluck('name','id');
+        $categories = Category::orderBy('id')->pluck('name','id','cat_pic');
         return $categories;
     }
 
