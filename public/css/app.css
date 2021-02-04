@@ -49,7 +49,8 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  font-family: 'Kosugi Maru', sans-serif;
+  background-clip: padding-box;
+  border: 8px solid rgba(0, 0, 0, 0.2);
 }
 
 article,
@@ -169,8 +170,7 @@ sup {
 }
 
 a {
-  color: #3490dc;
-  text-decoration: none;
+  color: #00c2ba;
   background-color: transparent;
 }
 
@@ -4516,7 +4516,9 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  margin-top: 24px;
 }
+
 
 .navbar .container,
 .navbar .container-fluid,
@@ -4554,6 +4556,10 @@ input[type=button].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+}
+.title-bar{
+  font-family: 'VT323', monospace;
+  margin-bottom: 0px;
 }
 
 .navbar-nav .nav-link {
@@ -5243,7 +5249,7 @@ input[type=button].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #3490dc;
+  color: #00c2ba;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }

@@ -19,4 +19,9 @@ class CategoriesController extends Controller
  
         return view('cities.show', compact('posts'));
     }
+
+    public function show()
+    {
+        return view('tokyo');
+    }
 }

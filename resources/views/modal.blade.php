@@ -24,11 +24,11 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="city_list">
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 16 }}" class="btn btn-classic">千代田区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 17 }}" class="btn btn-classic">中央区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 11 }}" class="btn btn-classic">新宿区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 10 }}" class="btn btn-classic">渋谷区</button>
-                                            <button type="submit" name="cat_id" value="{{ $cat_id = 22 }}" class="btn btn-classic">港区</button>
+                                            <button type="submit" name="cat_id" value="16" class="btn btn-classic">千代田区</button>
+                                            <button type="submit" name="cat_id" value="17" class="btn btn-classic">中央区</button>
+                                            <button type="submit" name="cat_id" value="11" class="btn btn-classic">新宿区</button>
+                                            <button type="submit" name="cat_id" value="10" class="btn btn-classic">渋谷区</button>
+                                            <button type="submit" name="cat_id" value="22" class="btn btn-classic">港区</button>
                                         </div>
                                     </div>
                                 </div>
